@@ -120,12 +120,12 @@ template <> bool less<int>(int a, int b) {
 }
 
 template <typename T, typename C = std::vector<T>>
-class priority_queue 
+class PriorityQueue 
 {
 public:
     C vector;
     int size;
-    priority_queue() : vector() {}
+    PriorityQueue() : vector() {}
 
     bool is_empty() {
         return (size == 0);
@@ -175,7 +175,7 @@ public:
 
 int main() 
 {
-    priority_queue<int> p;
+    PriorityQueue<int> p;
     std::cout << p.is_empty() << std::endl;
     p.push(2);
     std::cout << p.vector[0] << std::endl;
